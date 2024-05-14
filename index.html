@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./scss/itc-custom-select.css">
+    <link rel="stylesheet" href="./scss/style.css">
+    <title>Pulse Motion</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <img src="./img/png/logo.png" alt="" class="header__logo">
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="" class="nav__link">Главная</a></li>
+                    <li class="nav__item"><a href="" class="nav__link">Стили-танцев</a></li>
+                    <li class="nav__item"><a href="" class="nav__link">Педагоги</a></li>
+                    <li class="nav__item"><a href="" class="nav__link">Цены</a></li>
+                    <li class="nav__item"><a href="" class="nav__link">Расписание</a></li>
+                    <li class="nav__item"><a href="" class="nav__link">Франшиза</a></li>
+                    <li class="nav__item"><a href="" class="nav__link">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="itc-select" id="select-1">
+                <!-- Кнопка для открытия выпадающего списка -->
+                <button type="button" class="itc-select__toggle" name="car" value="" data-select="toggle"
+                    data-index="-1">Санкт-петербург</button>
+                <!-- Выпадающий список -->
+                <div class="itc-select__dropdown">
+                    <ul class="itc-select__options">
+                        <li class="itc-select__option" data-select="option" data-value="volkswagen" data-index="0">
+                            Москва</li>
+                        <li class="itc-select__option" data-select="option" data-value="ford" data-index="1">Казань</li>
+                        <li class="itc-select__option" data-select="option" data-value="toyota" data-index="2">Воронеж
+                        </li>
+                        <li class="itc-select__option" data-select="option" data-value="nissan" data-index="3">Лондон
+                        </li>
+                        <li class="itc-select__option" data-select="option" data-value="piter" data-index="4">Санкт-петербург
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="authorization">
+                <a href="" class="authorization__login">Вход</a> | <a href="" class="authorization__reg">Регистрация</a>
+            </div>
+        </div>
+    </header>
+</body>
+<script src="./js/itc-custom-select.js"></script>
+<script src="./js/script.js"></script>
+
+</html>
