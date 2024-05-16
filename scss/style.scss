@@ -8,31 +8,37 @@
     background-color: $color-blue;
     padding-top: 15px;
     padding-bottom: 15px;
+
     &__container {
         display: flex;
         align-items: center;
     }
+
     &__logo {
-        margin-right: vw(55);
+        margin-right: 57px;
     }
 }
 
 .nav {
     margin-right: 120px;
+
     &__list {
         padding: 0;
         display: flex;
         justify-content: space-between;
     }
+
     &__item {
         &:not(:last-child) {
             margin-right: 25px;
         }
     }
+
     &__link {
         white-space: nowrap;
         transition: color .3s ease;
         font-size: 18px;
+
         &:hover {
             color: darken($color-text, 25%);
         }
@@ -42,35 +48,41 @@
 .itc-select {
     width: auto;
     margin-right: 25px;
+
     &__toggle {
         padding: 0;
         white-space: nowrap;
         justify-content: start;
         background-color: transparent;
-        color: $color-white;
+        color: $color-text;
         font-style: normal;
         font-weight: 300;
         font-size: 15px;
         border: 0;
         transition: color .3s ease;
+
         &::after {
             width: 8px;
             height: 4px;
             margin-left: 8px;
             background-image: url(../img/svg/selectArrow.svg);
         }
+
         &:hover {
-            color: darken($color-white, 25%);
+            color: darken($color-text, 25%);
         }
     }
+
     &__dropdown {
         background: transparent;
         border: 0;
         max-height: vw(200);
     }
+
     &__option {
         color: $color-text;
         transition: color .3s ease;
+
         &:hover {
             color: darken($color-text, 25%);
             background: transparent;
@@ -81,9 +93,12 @@
 .authorization {
     display: flex;
     flex-wrap: nowrap;
-    &__login, &__reg {
+
+    &__login,
+    &__reg {
         transition: color .3s ease;
         font-size: 15px;
+
         &:hover {
             color: darken($color-text, 25%);
         }
@@ -95,5 +110,629 @@
 
     &__reg {
         margin-left: 4px;
+    }
+}
+
+.hero {
+    background-image: url(../img/jpg/herobg.jpg);
+    background-size: cover;
+    background-position: center center;
+
+    &__filter {
+        background-color: rgba($color-blue, .7);
+    }
+
+    &__container {
+        padding-top: 112px;
+        padding-bottom: 87px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .pulse {
+        &__text {
+            margin-bottom: 202px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__img {
+            &:nth-child(1) {
+                width: 274px;
+                height: 100px;
+                margin-bottom: 48px;
+            }
+
+            &:nth-child(2) {
+                width: 489px;
+                height: 101px;
+            }
+        }
+
+        &__btn {
+            border: 0;
+            outline: 0;
+            padding: 16px 32px;
+            background-color: $color-purple;
+            font-weight: 400;
+            color: $color-text;
+            font-family: "Nunito";
+            font-size: 21px;
+            transition: color, background-color .3s ease;
+
+            &:hover {
+                cursor: pointer;
+                background-color: darken($color-purple, 25%);
+                color: darken($color-text, 25%);
+            }
+        }
+    }
+
+    .dance {
+        &__img {
+            &:nth-child(1) {
+                height: 382px;
+                width: 101px;
+                margin-right: 48px;
+            }
+
+            &:nth-child(2) {
+                width: 101px;
+                height: 512px;
+            }
+        }
+    }
+}
+
+// about
+.about {
+    padding-top: 144px;
+    padding-bottom: 77px;
+
+    &__header {
+        text-align: center;
+        color: $color-blue;
+        font-family: "Poiret One";
+        font-size: 45px;
+        margin-bottom: 48px;
+    }
+
+    &__text {
+        color: $color-blue;
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 48px;
+    }
+
+    &__pictures {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__img {
+        width: 740px;
+        height: 416px;
+
+        &.small {
+            width: 524px;
+            height: 416px;
+        }
+
+        &:nth-child(1) {
+            margin-bottom: 16px;
+        }
+
+        &:nth-child(2) {
+            margin-bottom: 16px;
+        }
+    }
+}
+
+// styles
+.styles {
+    padding-top: 67px;
+    padding-bottom: 76px;
+
+    &__header {
+        text-align: center;
+        color: $color-blue;
+        font-family: "Poiret One";
+        font-size: 45px;
+        margin-bottom: 48px;
+    }
+
+    &__text {
+        color: $color-blue;
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 49px;
+    }
+
+    .accardion {
+        &__box {
+            position: relative;
+
+            &.active .accardion__label {
+                border-bottom: 2px solid $color-black;
+
+                &::after {
+                    transform: rotate(180deg) translateY(50%);
+                }
+            }
+        }
+
+        &__label {
+            position: relative;
+            padding: 24px;
+            border: 1px solid $color-black;
+            border-right: 2px solid $color-black;
+            border-left: 2px solid $color-black;
+
+            &.first {
+                border-top: 2px solid $color-black;
+            }
+
+            &.last {
+                border-bottom: 2px solid $color-black;
+            }
+
+            font-family: "Poiret One";
+            font-size: 37px;
+            color: $color-blue;
+
+            &::after {
+                content: '';
+                background-image: url(../img/svg/accardionArrow.svg);
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                position: absolute;
+                width: 34px;
+                height: 16px;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 24px;
+                transition: transform .3s ease;
+            }
+
+            &:hover {
+                cursor: pointer;
+                background-color: rgba($color-black, .25);
+            }
+
+            transition: background-color .3s ease;
+        }
+
+        &__content {
+            position: relative;
+            overflow: hidden;
+            max-height: 0;
+            transition: .3s ease;
+        }
+
+        &__text {
+            font-size: 18px;
+            line-height: 30px;
+            color: $color-blue;
+            padding: 24px;
+            border-right: 2px solid $color-black;
+            border-left: 2px solid $color-black;
+            border-bottom: 1px solid $color-black;
+        }
+    }
+}
+
+// educators
+
+.educators {
+    background-color: $color-blue;
+    padding-top: 77px;
+    padding-bottom: 77px;
+
+    &__header {
+        text-align: center;
+        font-family: "Poiret One";
+        font-size: 45px;
+        margin-bottom: 48px;
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 48px;
+    }
+
+    &__pictures {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__block {
+        width: 308px;
+        height: 308px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        align-items: end;
+
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+            margin-bottom: 16px;
+        }
+
+        &__header {
+            height: 100%;
+            font-family: "Poiret One";
+            font-size: 31px;
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            & .educators__filter {
+                background-color: rgba($color-blue, 0);
+            }
+        }
+    }
+
+    &__filter {
+        box-sizing: border-box;
+        padding: 16px;
+        width: 100%;
+        height: 100%;
+        transition: background-color .3s ease;
+        background-color: rgba($color-blue, .4);
+    }
+}
+
+// price
+
+.price {
+    padding-top: 77px;
+    padding-bottom: 77px;
+
+    &__header {
+        text-align: center;
+        font-family: "Poiret One";
+        font-size: 45px;
+        color: $color-blue;
+        margin-bottom: 48px;
+    }
+
+    &__block {
+        display: flex;
+        align-items: center;
+    }
+
+    &__card {
+        text-align: center;
+        color: $color-blue;
+        width: 308px;
+        height: 426px;
+        background-color: $color-pink;
+        box-sizing: border-box;
+        padding: 56px 77px 31px 77px;
+        margin-right: 16px;
+
+        &.last {
+            margin-right: 69px;
+        }
+    }
+
+    .card {
+        &__quantity {
+            font-family: "Poiret One";
+            font-size: 100px;
+        }
+
+        &__train {
+            font-family: "Poiret One";
+            font-size: 31px;
+            margin-bottom: 8px;
+        }
+
+        &__time {
+            font-size: 18px;
+            margin-bottom: 48px;
+        }
+
+        &__price {
+            font-family: "Poiret One";
+            font-size: 37px;
+            margin-bottom: 24px;
+        }
+
+        &__buy {
+            box-sizing: border-box;
+            width: 140px;
+            height: 41px;
+            padding: 8px 24px;
+            background-color: $color-purple--dark;
+            border: 0;
+            outline: 0;
+            color: $color-text;
+            font-family: "Nunito";
+            font-size: 18px;
+            transition: background-color .3s ease;
+
+            &:hover {
+                background-color: lighten($color-purple--dark, 25%);
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__btn {
+        box-sizing: border-box;
+        font-family: "Nunito";
+        background-color: $color-purple--dark;
+        width: 212px;
+        height: 61px;
+        padding: 16px 32px;
+        font-weight: 400;
+        font-size: 21px;
+        color: $color-text;
+        transition: background-color .3s ease;
+
+        &:hover {
+            background-color: lighten($color-purple--dark, 25%);
+            cursor: pointer;
+        }
+    }
+}
+
+// timetable
+
+.timetable {
+    padding: 77px 0;
+    background-color: $color-blue;
+
+    &__container {
+        text-align: center;
+    }
+
+    &__header {
+        text-align: center;
+        font-family: "Poiret One";
+        font-size: 45px;
+        color: $color-text;
+        margin-bottom: 59px;
+    }
+
+    &__block {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__card {
+        box-sizing: border-box;
+        text-align: center;
+        width: 308px;
+        height: 259px;
+        padding: 24px 48px;
+        background-color: $color-pink;
+        color: $color-blue;
+        margin-bottom: 24px;
+    }
+
+    .card {
+        &__header {
+            font-family: "Poiret One";
+            font-size: 31px;
+            margin-bottom: 8px;
+        }
+
+        &__rang {
+            font-family: "Poiret One";
+            font-size: 21px;
+            margin-bottom: 16px;
+        }
+
+        &__time {
+            font-size: 18px;
+            margin-bottom: 16px;
+
+            & span {
+                margin-right: 24px;
+            }
+        }
+
+        &__name {
+            font-size: 18px;
+            margin-bottom: 24px;
+        }
+
+        &__btn {
+            box-sizing: border-box;
+            font-weight: 400;
+            font-family: "Nunito";
+            width: 213px;
+            height: 36px;
+            padding: 8px 24px;
+            background-color: $color-purple--dark;
+            color: $color-text;
+            transition: background-color .3s ease;
+
+            &:hover {
+                cursor: pointer;
+                background-color: lighten($color-purple--dark, 25%);
+            }
+        }
+    }
+
+    &__btn {
+        box-sizing: border-box;
+        width: 221px;
+        height: 61px;
+        padding: 16px 32px;
+        background-color: $color-pink;
+        color: $color-blue;
+        font-size: 21px;
+        font-family: "Nunito";
+        font-weight: 400;
+        transition: background-color .3s ease;
+
+        &:hover {
+            cursor: pointer;
+            background-color: darken($color-pink, 25%);
+        }
+    }
+}
+
+// franchise
+
+.franchise {
+    padding: 77px 0;
+    color: $color-blue;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__header {
+        text-align: center;
+        font-family: "Poiret One";
+        font-size: 45px;
+        margin-bottom: 48px;
+    }
+
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+
+        &.last {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 24px;
+
+        &:nth-child(1) {
+            margin-right: 16px;
+        }
+    }
+
+    &__img {
+        margin-right: 16px;
+
+        &:nth-child(3) {
+            margin-right: 0;
+        }
+    }
+    &__btn {
+        box-sizing: border-box;
+        width: 176px;
+        height: 61px;
+        padding: 16px 32px;
+        background-color: $color-purple--dark;
+        color: $color-text;
+        font-size: 21px;
+        font-family: "Nunito";
+        font-weight: 400;
+        transition: background-color .3s ease;
+
+        &:hover {
+            cursor: pointer;
+            background-color: lighten($color-purple--dark, 25%);
+        }
+    }
+}
+
+// contacts
+
+.contacts {
+    padding-top: 77px;
+    padding-bottom: 144px;
+    color: $color-blue;
+    &__header {
+        text-align: center;
+        font-family: "Poiret One";
+        font-size: 45px;
+        margin-bottom: 48px;
+    }
+    &__block {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__card {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 416px;
+        height: 259px;
+        padding: 32px;
+        background-color: $color-pink;
+    }
+
+    .card {
+        &__name {
+            font-size: 18px;
+        }
+        &__link {
+            font-family: "Poiret One";
+            font-size: 31px;
+            line-height: 50px;
+            color: $color-blue;
+            transition: color .3s ease;
+            &.aboba {
+                margin-right: 16px;
+            }
+            &:hover {
+                color: lighten($color-blue, 25%);
+            }
+        }
+    }
+}
+
+// footer
+
+.footer {
+    padding-top: 83px;
+    padding-bottom: 55px;
+    background-color: $color-blue;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+    }
+    &__block {
+        text-align: right;
+    }
+    &__nav {
+        margin-bottom: 48px;
+    }
+    &__link {
+        margin-bottom: 8px;
+        font-size: 15px;
+        font-weight: 300;
+        transition: color .3s ease;
+        &s {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 61px;
+        }
+        &:hover {
+            cursor: pointer;
+            color: darken($color-text, 25%);
+        }
+    }
+    &__cop {
+        font-size: 15px;
+        font-weight: 300;
+    }
+    &__item {
+        font-weight: 300;
+        font-size: 15px;
     }
 }

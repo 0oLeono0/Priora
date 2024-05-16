@@ -3,6 +3,7 @@ html {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -22,11 +23,26 @@ a {
   color: $color-text;
 }
 
+h1,h2,h3,h4,h5 {
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  border: 0;
+  outline: 0;
+}
+
 body {
   margin: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Nunito";
   font-weight: 400;
-  background-color: #fff;
+  background-color: $color-white;
   color: $color-text;
   width: 100%;
   max-width: 100%;
@@ -37,7 +53,7 @@ body {
   box-sizing: border-box;
   margin: 0 auto;
   max-width: 1440px;
-  padding: 0 vw(80);
+  padding: 0 80px;
 }
 
 *:focus {
