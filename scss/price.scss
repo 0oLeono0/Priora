@@ -1,0 +1,140 @@
+@import "colors";
+@import "fonts";
+@import "responsive";
+@import "base";
+
+.main {
+    padding: 144px 0;
+    color: $color-blue;
+
+    &__header {
+        text-align: center;
+        font-family: "Poiret One";
+        font-size: 54px;
+        margin-bottom: 80px;
+    }
+
+    .train {
+        &__block {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            margin-bottom: 48px;
+        }
+
+        &__btn {
+            width: 473px;
+            height: 68px;
+            font-family: 'Poiret One';
+            font-size: 31px;
+            background-color: $color-pink;
+            color: $color-blue;
+            font-weight: 400;
+            transition: background-color .3s ease;
+
+            &:not(:last-child) {
+                margin-right: 16px;
+            }
+
+            &:hover {
+                cursor: pointer;
+                background-color: darken($color-pink, 25%);
+            }
+
+            &.active {
+                background-color: transparent;
+                border: 2px solid $color-blue;
+            }
+        }
+    }
+}
+
+.price {
+    &__card {
+        text-align: center;
+        color: $color-blue;
+        width: 308px;
+        height: 426px;
+        background-color: $color-pink;
+        box-sizing: border-box;
+        padding: 56px 77px 31px 77px;
+        margin-right: 16px;
+
+        &.last {
+            margin-right: 69px;
+        }
+    }
+
+}
+
+.small {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+
+.big {
+    display: flex;
+    justify-content: space-between;
+
+    .price {
+        &__card {
+            width: 632px;
+            height: 426px;
+
+            &.last {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .card__buy {
+        width: 287px;
+        height: 41px;
+        padding: 8px 40px;
+    }
+}
+
+.card {
+    &__quantity {
+        font-family: "Poiret One";
+        font-size: 100px;
+    }
+
+    &__train {
+        font-family: "Poiret One";
+        font-size: 31px;
+        margin-bottom: 8px;
+    }
+
+    &__time {
+        font-size: 18px;
+        margin-bottom: 48px;
+    }
+
+    &__price {
+        font-family: "Poiret One";
+        font-size: 37px;
+        margin-bottom: 24px;
+    }
+
+    &__buy {
+        box-sizing: border-box;
+        width: 140px;
+        height: 41px;
+        padding: 8px 24px;
+        background-color: $color-purple--dark;
+        border: 0;
+        outline: 0;
+        color: $color-text;
+        font-family: "Nunito";
+        font-size: 18px;
+        transition: background-color .3s ease;
+
+        &:hover {
+            background-color: lighten($color-purple--dark, 25%);
+            cursor: pointer;
+        }
+    }
+}

@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Функция для показа блока по стилю и изменения стиля кнопки
     function showStyleBlock(style) {
         // Скрываем все блоки
-        document.querySelectorAll('.main__about').forEach(block => {
+        document.querySelectorAll('.main__educator').forEach(block => {
             block.classList.remove('active');
         });
         // Показываем блок с соответствующим id
@@ -40,10 +40,4 @@ document.addEventListener('DOMContentLoaded', () => {
             window.history.pushState({}, '', `?style=${style}`);
         });
     });
-
-    document.querySelectorAll('.about__btn').forEach(button => {
-        button.addEventListener('click', () => {
-            window.location.href = `price.html`;
-        })
-    });
-});
+})

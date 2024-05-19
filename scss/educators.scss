@@ -1,0 +1,74 @@
+@import "colors";
+@import "fonts";
+@import "responsive";
+@import "base";
+
+.main {
+    padding: 144px 0;
+    color: $color-blue;
+
+    &__header {
+        text-align: center;
+        font-family: "Poiret One";
+        font-size: 54px;
+        margin-bottom: 80px;
+    }
+
+    &__styles {
+        margin-bottom: 48px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__btn {
+        box-sizing: border-box;
+        padding: 16px;
+        background-color: $color-pink;
+        color: $color-blue;
+        font-size: 31px;
+        font-family: "Poiret One";
+        font-weight: 400;
+        transition: background-color .3s ease;
+
+        &:hover {
+            cursor: pointer;
+            background-color: darken($color-pink, 25%);
+        }
+        &.active {
+            background-color: transparent;
+            border: 2px solid $color-blue;
+        }
+    }
+
+    &__educator {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+
+    .educator {
+        &__block {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 48px;
+        }
+        &__name {
+            font-family: "Poiret One";
+            font-size: 37px;
+            margin-bottom: 48px;
+        }
+        &__text {
+            max-width: 740px;
+            font-size: 18px;
+            line-height: 30px;
+            &:not(:last-child) {
+                margin-bottom: 24px;
+            }
+        }
+    }
+}

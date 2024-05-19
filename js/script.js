@@ -18,8 +18,14 @@ document.addEventListener('DOMContentLoaded', () => {
         box.addEventListener("click", boxHandler);
     })
 
-    // Получаем все кнопки с классом "accardion__btn"
+    // Получаем все кнопки
     const buttons = document.querySelectorAll('.accardion__btn');
+    const educators = document.querySelectorAll('.educators__block');
+    const priceBtn = document.querySelector('.price__btn');
+
+    priceBtn.addEventListener('click', () => {
+        window.location.href = `price.html`;
+    })
 
     // Добавляем обработчик событий для каждой кнопки
     buttons.forEach(button => {
@@ -28,6 +34,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const style = this.getAttribute('data-style');
             // Перенаправляем пользователя на страницу styles.html с параметром стиля
             window.location.href = `styles.html?style=${style}`;
+        });
+    });
+
+    educators.forEach(educator => {
+        educator.addEventListener('click', function() {
+            // Получаем значение атрибута data-style
+            const style = this.getAttribute('data-style');
+            // Перенаправляем пользователя на страницу educators.html с параметром стиля
+            window.location.href = `educators.html?style=${style}`;
         });
     });
 })
