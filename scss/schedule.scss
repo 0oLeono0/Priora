@@ -16,6 +16,10 @@
         position: relative;
         color: $color-purple--dark;
         --swiper-navigation-size: 26px;
+        transition: color .3s ease;
+        &:hover {
+            color: lighten($color-purple--dark, 25%);
+        }
     }
 
     &__title {

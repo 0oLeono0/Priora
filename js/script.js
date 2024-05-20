@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const educators = document.querySelectorAll('.educators__block');
     const priceBtn = document.querySelector('.price__btn');
     const timetableBtn = document.querySelector('.timetable__btn');
+    const franchiseBtn = document.querySelector('.franchise__btn');
 
     
     priceBtn.addEventListener('click', () => {
@@ -31,6 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     timetableBtn.addEventListener('click', () => {
         window.location.href = `schedule.html`;
+    })
+
+    franchiseBtn.addEventListener('click', () => {
+        window.location.href = `franchise.html`;
     })
     // Добавляем обработчик событий для каждой кнопки
     buttons.forEach(button => {
