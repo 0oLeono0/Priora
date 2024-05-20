@@ -1,0 +1,95 @@
+@import "colors";
+@import "fonts";
+@import "responsive";
+@import "base";
+
+.main {
+    color: $color-blue;
+}
+
+.schedule {
+    padding: 144px 0;
+    text-align: center;
+
+    &__arrow {
+        margin: 0 30px;
+        position: relative;
+        color: $color-purple--dark;
+        --swiper-navigation-size: 26px;
+    }
+
+    &__title {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        font-family: "Poiret One";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 54px;
+        line-height: 63px;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+
+    &__table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+    }
+
+    &__cell {
+        box-sizing: border-box;
+        padding: 8px;
+        width: 145px;
+        height: 105px;
+        border: 1px solid rgba($color-blue, .2);
+        font-style: normal;
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 20px;
+
+        & span {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__title {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 25px;
+        }
+
+        &--first {
+            font-family: 'Poiret One';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 31px;
+            border-left: 0;
+        }
+
+        &--date {
+            border-top: 0;
+            font-family: 'Poiret One';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 31px;
+        }
+
+        &--last {
+            border-right: 0;
+        }
+
+        &--done {
+            border-bottom: 0;
+        }
+
+        &--class {
+            & span {
+                background-color: $color-pink;
+            }
+        }
+    }
+}

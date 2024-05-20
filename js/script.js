@@ -22,11 +22,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.accardion__btn');
     const educators = document.querySelectorAll('.educators__block');
     const priceBtn = document.querySelector('.price__btn');
+    const timetableBtn = document.querySelector('.timetable__btn');
 
+    
     priceBtn.addEventListener('click', () => {
         window.location.href = `price.html`;
     })
-
+    
+    timetableBtn.addEventListener('click', () => {
+        window.location.href = `schedule.html`;
+    })
     // Добавляем обработчик событий для каждой кнопки
     buttons.forEach(button => {
         button.addEventListener('click', function() {
