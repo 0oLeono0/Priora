@@ -3,6 +3,10 @@
 @import "responsive";
 @import "base";
 
+.no-scroll {
+    overflow: hidden;
+}
+
 
 .header {
     background-color: $color-blue;
@@ -112,6 +116,235 @@
         margin-left: 4px;
     }
 }
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    &--reg {
+        & .modal {
+            &__content {
+                margin: 5% auto;
+                height: 740px;
+            }
+        }
+    }
+
+    &__content {
+        box-sizing: border-box;
+        background-color: #2c003e;
+        margin: 10% auto;
+        padding: 48px 32px;
+        width: 448px;
+        height: 429px;
+        color: $color-text;
+    }
+
+    .bibus {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 5px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__close {
+        display: block;
+        background-image: url(../img/svg/close.svg);
+        width: 100%;
+        height: 28px;
+        background-repeat: no-repeat;
+        background-position: center right;
+        transition: filter .3s ease;
+
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            filter: brightness(75%);
+        }
+    }
+
+    &__title {
+        text-align: center;
+        font-family: "Poiret One";
+        font-weight: 400;
+        font-size: 31px;
+        margin-bottom: 48px;
+    }
+
+    &__btn {
+        box-sizing: border-box;
+        width: 108px;
+        height: 45px;
+        padding: 8px 24px;
+        background-color: $color-pink;
+        color: $color-text;
+        font-size: 21px;
+        font-family: "Nunito";
+        font-weight: 400;
+        transition: background-color .3s ease;
+        &--reg {
+            width: 251px;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: $color-purple;
+        }
+    }
+
+    &__label {
+        display: flex;
+        width: 100%;
+        justify-content: start;
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    &__input {
+        box-sizing: border-box;
+        width: 100%;
+        background-color: $color-text;
+        padding: 4px 16px;
+        font-size: 18px;
+        margin-bottom: 28px;
+
+        &::placeholder {
+            color: $color-pink;
+        }
+    }
+
+    .password {
+        &-container {
+            width: 100%;
+            position: relative;
+            margin-bottom: 24px;
+
+            &--reg {
+                margin: 0;
+            }
+        }
+
+        &-toggle {
+            top: 4px;
+            right: 16px;
+            display: block;
+            position: absolute;
+            width: 23px;
+            height: 18px;
+            background-image: url(../img/svg/eye.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            cursor: pointer;
+            &--reg {
+                top: 4px;
+                right: 16px;
+                display: block;
+                position: absolute;
+                width: 23px;
+                height: 18px;
+                background-image: url(../img/svg/eye.svg);
+                background-repeat: no-repeat;
+                background-position: center center;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.checkbox__text {
+    font-weight: 300;
+    font-size: 12px;
+}
+
+/* Hide the default checkbox */
+.chckbox__container {
+    width: 100%;
+    margin-bottom: 48px;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    display: flex;
+    align-items: center;
+
+    /* Create a custom checkbox */
+    .checkbox__checkmark {
+        position: relative;
+        box-shadow: $color-text 0px 0px 0px 2px;
+        background-color: $color-purple--dark;
+        height: 17px;
+        width: 17px;
+        margin-right: 8px;
+        flex-shrink: 0;
+        margin-top: -1px;
+        transition: all 0.2s ease 0s;
+        cursor: pointer;
+        transform-origin: 0px 10px;
+        border-radius: 4px;
+        margin: -1px 10px 0px 0px;
+        padding: 0px;
+        box-sizing: border-box;
+
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+    }
+
+    input:checked~.checkbox__checkmark {
+        box-shadow: $color-text 0px 0px 0px 2px;
+        background-color: $color-purple;
+        height: 17px;
+        width: 17px;
+        margin-right: 10px;
+        flex-shrink: 0;
+        margin-top: -1px;
+        transition: all 0.2s ease 0s;
+        cursor: pointer;
+        transform-origin: 0px 10px;
+        border-radius: 4px;
+        margin: -1px 10px 0px 0px;
+        padding: 0px;
+        box-sizing: border-box;
+
+        &:after {
+            display: block;
+        }
+    }
+
+    .checkbox__checkmark:after {
+        left: 0.40em;
+        top: 0.20em;
+        width: 0.25em;
+        height: 0.5em;
+        border: solid white;
+        border-width: 0 0.15em 0.15em 0;
+        transform: rotate(45deg);
+        transition: all 500ms ease-in-out;
+    }
+}
+
+
+
 
 .hero {
     background-image: url(../img/jpg/herobg.jpg);
@@ -255,10 +488,11 @@
             border-right: 2px solid $color-black;
             border-left: 2px solid $color-black;
             border-bottom: 2px solid $color-black;
+
             &.first {
                 border-top: 2px solid $color-black;
             }
-    
+
             &.last {
                 border-bottom: 2px solid $color-black;
             }
@@ -283,7 +517,7 @@
             font-family: "Nunito";
             font-weight: 400;
             transition: background-color .3s ease;
-    
+
             &:hover {
                 cursor: pointer;
                 background-color: lighten($color-purple--dark, 25%);
@@ -335,7 +569,7 @@
             max-height: 0;
             transition: .3s ease;
         }
-        
+
         &__text {
             max-width: 763px;
             font-size: 18px;
@@ -651,6 +885,7 @@
             margin-right: 0;
         }
     }
+
     &__btn {
         box-sizing: border-box;
         width: 176px;
@@ -676,16 +911,19 @@
     padding-top: 77px;
     padding-bottom: 144px;
     color: $color-blue;
+
     &__header {
         text-align: center;
         font-family: "Poiret One";
         font-size: 45px;
         margin-bottom: 48px;
     }
+
     &__block {
         display: flex;
         justify-content: space-between;
     }
+
     &__card {
         box-sizing: border-box;
         display: flex;
@@ -701,15 +939,18 @@
         &__name {
             font-size: 18px;
         }
+
         &__link {
             font-family: "Poiret One";
             font-size: 31px;
             line-height: 50px;
             color: $color-blue;
             transition: color .3s ease;
+
             &.aboba {
                 margin-right: 16px;
             }
+
             &:hover {
                 color: lighten($color-blue, 25%);
             }
@@ -723,36 +964,44 @@
     padding-top: 83px;
     padding-bottom: 55px;
     background-color: $color-blue;
+
     &__container {
         display: flex;
         justify-content: space-between;
         align-items: end;
     }
+
     &__block {
         text-align: right;
     }
+
     &__nav {
         margin-bottom: 48px;
     }
+
     &__link {
         margin-bottom: 8px;
         font-size: 15px;
         font-weight: 300;
         transition: color .3s ease;
+
         &s {
             display: flex;
             flex-direction: column;
             margin-bottom: 61px;
         }
+
         &:hover {
             cursor: pointer;
             color: darken($color-text, 25%);
         }
     }
+
     &__cop {
         font-size: 15px;
         font-weight: 300;
     }
+
     &__item {
         font-weight: 300;
         font-size: 15px;

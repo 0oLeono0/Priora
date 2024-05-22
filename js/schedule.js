@@ -5,3 +5,7 @@ const swiper = new Swiper('.swiper', {
         prevEl: '.swiper-button-prev',
     },
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const select1 = new ItcCustomSelect('#select-1');
+})

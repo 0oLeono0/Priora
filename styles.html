@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
     <link rel="stylesheet" href="./scss/itc-custom-select.css">
+    <link rel="stylesheet" href="./scss/style.css">
     <link rel="stylesheet" href="./scss/styles.css">
     <title>Pulse Motion</title>
 </head>
@@ -47,7 +48,7 @@
             </div>
 
             <div class="authorization">
-                <a href="" class="authorization__login">Вход</a> | <a href="" class="authorization__reg">Регистрация</a>
+                <a href="" class="authorization__login link-to-login">Вход</a> | <a href="" class="authorization__reg link-to-reg">Регистрация</a>
             </div>
         </div>
     </header>
@@ -316,12 +317,17 @@
                 <nav class="footer__nav">
                     <ul class="nav__list">
                         <li class="nav__item"><a href="index.html#hero" class="nav__link footer__item">Главная</a></li>
-                        <li class="nav__item"><a href="index.html#styles" class="nav__link footer__item">Стили-танцев</a></li>
-                        <li class="nav__item"><a href="index.html#educators" class="nav__link footer__item">Педагоги</a></li>
+                        <li class="nav__item"><a href="index.html#styles"
+                                class="nav__link footer__item">Стили-танцев</a></li>
+                        <li class="nav__item"><a href="index.html#educators" class="nav__link footer__item">Педагоги</a>
+                        </li>
                         <li class="nav__item"><a href="index.html#price" class="nav__link footer__item">Цены</a></li>
-                        <li class="nav__item"><a href="index.html#timetable" class="nav__link footer__item">Расписание</a></li>
-                        <li class="nav__item"><a href="index.html#franchise" class="nav__link footer__item">Франшиза</a></li>
-                        <li class="nav__item"><a href="index.html#contacts" class="nav__link footer__item">Контакты</a></li>
+                        <li class="nav__item"><a href="index.html#timetable"
+                                class="nav__link footer__item">Расписание</a></li>
+                        <li class="nav__item"><a href="index.html#franchise" class="nav__link footer__item">Франшиза</a>
+                        </li>
+                        <li class="nav__item"><a href="index.html#contacts" class="nav__link footer__item">Контакты</a>
+                        </li>
                     </ul>
                 </nav>
                 <div class="footer__links">
@@ -332,9 +338,70 @@
             </div>
         </div>
     </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal__content">
+            <span class="modal__close"></span>
+            <h2 class="modal__title"><a href="#" class="bibus">Вход</a> | <a href="#"
+                    class="link-to-reg">Регистрация</a></h2>
+            <form class="modal__form">
+                <label class="phone-email__label modal__label" for="phone-email">Номер телефона / электронная
+                    почта</label>
+                <input required class="phone-email modal__input" type="text" id="phone-email" name="phone-email"
+                    placeholder="8 (999) 999-99-99">
+                <label class="password__label modal__label" for="password">Пароль</label>
+                <div class="password-container">
+                    <input required class="password modal__input" type="password" id="password" name="password"
+                        placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;">
+                    <span class="password-toggle"></span>
+                </div>
+                <button class="modal__btn" type="submit">Войти</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="modal--reg" class="modal modal--reg">
+        <div class="modal__content">
+            <span class="modal__close"></span>
+            <h2 class="modal__title"><a href="#" class="link-to-login">Вход</a> | <a href="#"
+                    class="bibus">Регистрация</a></h2>
+            <form class="modal__form">
+                <label class="name__label modal__label" for="name">Имя и Фамилия*</label>
+                <input required class="name modal__input" type="text" id="name" name="name"
+                    placeholder="Дарья Круглова">
+                <label class="phone__label modal__label" for="phone">Номер телефона*</label>
+                <input required class="phone modal__input" type="tel" id="phone" name="phone"
+                    placeholder="8 (999) 999-99-99">
+                <label class="email__label modal__label" for="email">Электронная почта</label>
+                <input class="email modal__input" type="email" id="email" name="email" placeholder="pochta@mail.ru">
+                <label class="password-reg__label modal__label" for="password-reg">Пароль*</label>
+                <div class="password-container password-container--reg">
+                    <input required class="password-reg modal__input" type="password" id="password-reg"
+                        name="password-reg"
+                        placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;">
+                    <span class="password-toggle"></span>
+                </div>
+                <label class="password-repet__label modal__label" for="password-repet">Повторите пароль*</label>
+                <div class="password-container password-container--reg">
+                    <input required class="password-repet modal__input" type="password" id="password-repet"
+                        name="password-repet"
+                        placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;">
+                    <span class="password-toggle--reg"></span>
+                </div>
+                <label class="chckbox__container">
+                    <input class="checkbox" type="checkbox">
+                    <div class="checkbox__checkmark"></div>
+                    <p class="checkbox__text">согласен на обработку персональных данных*</p>
+                </label>
+
+                <button class="modal__btn modal__btn--reg" type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
 </body>
 <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
 <script src="./js/itc-custom-select.js"></script>
 <script src="./js/styles.js"></script>
+<script src="./js/modal.js"></script>
 
 </html>
