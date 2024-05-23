@@ -95,5 +95,11 @@
                 background-color: $color-pink;
             }
         }
+
+        &--prev {
+            & span {
+                background-color: rgba($color-pink, .2);
+            }
+        }
     }
 }

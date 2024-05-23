@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const select1 = new ItcCustomSelect('#select-1');
+    const select2 = new ItcCustomSelect('#select-2');
     const boxes = Array.from(document.querySelectorAll(".pricing__feature"));
 
     function boxHandler(e) {

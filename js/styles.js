@@ -1,49 +1,32 @@
+const params = new URLSearchParams(window.location.search);
+const styleParam = params.get('style');
+
+// Функция для получения индекса слайда по его id
+function getSlideIndexById(id) {
+  const slides = document.querySelectorAll('.swiper-slide');
+  for (let i = 0; i < slides.length; i++) {
+    if (slides[i].id === id) {
+      return i;
+    }
+  }
+  return 0; // Возвращаем первый слайд по умолчанию, если id не найден
+}
+
+const initialSlide = getSlideIndexById(styleParam);
+
+const swiper = new Swiper('.swiper', {
+  initialSlide: initialSlide,
+  pagination: {
+    el: '.main__list',
+    clickable: true,
+    renderBullet: function (index, className) {
+      const styles = ['HipHop', 'Vogue', 'Dancehall', 'HighHeels', 'HouseDance', 'Electro', 'Popping', 'JazzFunk'];
+      const styleName = styles[index];
+      return '<li class="main__item ' + className + '"><button data-style="' + styleName + '" class="main__btn">' + styleName.replace(/([A-Z])/g, ' $1').trim() + '</button></li>';
+    }
+  }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     const select1 = new ItcCustomSelect('#select-1');
-    // Функция для показа блока по стилю и изменения стиля кнопки
-    function showStyleBlock(style) {
-        // Скрываем все блоки
-        document.querySelectorAll('.main__about').forEach(block => {
-            block.classList.remove('active');
-        });
-        // Показываем блок с соответствующим id
-        const activeBlock = document.getElementById(style);
-        if (activeBlock) {
-            activeBlock.classList.add('active');
-        }
-
-        // Сбрасываем стиль всех кнопок
-        document.querySelectorAll('.main__btn').forEach(button => {
-            button.classList.remove('active');
-        });
-        // Устанавливаем стиль активной кнопки
-        const activeButton = document.querySelector(`.main__btn[data-style="${style}"]`);
-        if (activeButton) {
-            activeButton.classList.add('active');
-        }
-    }
-
-    // Проверка параметров URL
-    const params = new URLSearchParams(window.location.search);
-    const styleParam = params.get('style');
-    if (styleParam) {
-        showStyleBlock(styleParam);
-    }
-
-    // Добавляем обработчики событий для кнопок
-    const buttons = document.querySelectorAll('.main__btn');
-    buttons.forEach(button => {
-        button.addEventListener('click', function () {
-            const style = this.getAttribute('data-style');
-            showStyleBlock(style);
-            // Обновляем URL без перезагрузки страницы
-            window.history.pushState({}, '', `?style=${style}`);
-        });
-    });
-
-    document.querySelectorAll('.about__btn').forEach(button => {
-        button.addEventListener('click', () => {
-            window.location.href = `price.html`;
-        })
-    });
 });

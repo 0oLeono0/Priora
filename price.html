@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./scss/itc-custom-select.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./scss/style.css">
     <link rel="stylesheet" href="./scss/price.css">
     <title>Pulse Motion</title>
@@ -55,54 +56,80 @@
     <main class="main">
         <div class="container">
             <h2 class="main__header">Стоимость занятий</h2>
-            <div class="train__block">
-                <button class="train__btn active">Групповые тренировки</button>
-                <button class="train__btn">Индивидуальные тренировки</button>
+            <div class="main__styles">
+                <ul class="main__list swiper-pagination">
+                    <li class="main__item"><button class="main__btn">Hip-hop</button></li>
+                    <li class="main__item"><button class="main__btn">Vogue</button></li>
+                </ul>
             </div>
-            <div class="small">
-                <div class="price__card">
-                    <p class="card__quantity">1</p>
-                    <p class="card__train">тренировка</p>
-                    <p class="card__time">(1,5 часа)</p>
-                    <p class="card__price">500 ₽</p>
-                    <button class="card__buy">Купить</button>
-                </div>
-                <div class="price__card">
-                    <p class="card__quantity">4</p>
-                    <p class="card__train">тренировки</p>
-                    <p class="card__time">(6 часов)</p>
-                    <p class="card__price">3800 ₽</p>
-                    <button class="card__buy">Купить</button>
-                </div>
-                <div class="price__card">
-                    <p class="card__quantity">8</p>
-                    <p class="card__train">тренировок</p>
-                    <p class="card__time">(8 часов)</p>
-                    <p class="card__price">5500 ₽</p>
-                    <button class="card__buy">Купить</button>
-                </div>
-                <div class="price__card last">
-                    <p class="card__quantity">12</p>
-                    <p class="card__train">тренировок</p>
-                    <p class="card__time">(12 часов)</p>
-                    <p class="card__price">6000 ₽</p>
-                    <button class="card__buy">Купить</button>
-                </div>
-            </div>
-            <div class="big">
-                <div class="price__card">
-                    <p class="card__quantity">Безлимит</p>
-                    <p class="card__train">тренировок</p>
-                    <p class="card__time">(на месяц)</p>
-                    <p class="card__price">9000 ₽</p>
-                    <button class="card__buy">Купить</button>
-                </div>
-                <div class="price__card last">
-                    <p class="card__quantity">Безлимит</p>
-                    <p class="card__train">тренировок</p>
-                    <p class="card__time">(на год)</p>
-                    <p class="card__price">70 000 ₽</p>
-                    <button class="card__buy">Купить</button>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="small">
+                            <div class="price__card">
+                                <p class="card__quantity">1</p>
+                                <p class="card__train">тренировка</p>
+                                <p class="card__time">(1,5 часа)</p>
+                                <p class="card__price">500 ₽</p>
+                                <button class="card__buy">Купить</button>
+                            </div>
+                            <div class="price__card">
+                                <p class="card__quantity">4</p>
+                                <p class="card__train">тренировки</p>
+                                <p class="card__time">(6 часов)</p>
+                                <p class="card__price">3800 ₽</p>
+                                <button class="card__buy">Купить</button>
+                            </div>
+                            <div class="price__card">
+                                <p class="card__quantity">8</p>
+                                <p class="card__train">тренировок</p>
+                                <p class="card__time">(8 часов)</p>
+                                <p class="card__price">5500 ₽</p>
+                                <button class="card__buy">Купить</button>
+                            </div>
+                            <div class="price__card last">
+                                <p class="card__quantity">12</p>
+                                <p class="card__train">тренировок</p>
+                                <p class="card__time">(12 часов)</p>
+                                <p class="card__price">6000 ₽</p>
+                                <button class="card__buy">Купить</button>
+                            </div>
+                        </div>
+                        <div class="big">
+                            <div class="price__card">
+                                <p class="card__quantity">Безлимит</p>
+                                <p class="card__train">тренировок</p>
+                                <p class="card__time">(на месяц)</p>
+                                <p class="card__price">9000 ₽</p>
+                                <button class="card__buy">Купить</button>
+                            </div>
+                            <div class="price__card last">
+                                <p class="card__quantity">Безлимит</p>
+                                <p class="card__train">тренировок</p>
+                                <p class="card__time">(на год)</p>
+                                <p class="card__price">70 000 ₽</p>
+                                <button class="card__buy">Купить</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="big">
+                            <div class="price__card">
+                                <p class="card__quantity">Безлимит</p>
+                                <p class="card__train">тренировок</p>
+                                <p class="card__time">(на месяц)</p>
+                                <p class="card__price">9000 ₽</p>
+                                <button class="card__buy">Купить</button>
+                            </div>
+                            <div class="price__card last">
+                                <p class="card__quantity">Безлимит</p>
+                                <p class="card__train">тренировок</p>
+                                <p class="card__time">(на год)</p>
+                                <p class="card__price">70 000 ₽</p>
+                                <button class="card__buy">Купить</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -198,6 +225,7 @@
     </div>
 </body>
 <script src="./js/itc-custom-select.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="./js/price.js"></script>
 <script src="./js/modal.js"></script>
 

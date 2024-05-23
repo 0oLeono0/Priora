@@ -2,10 +2,12 @@ document.addEventListener('DOMContentLoaded', function () {
     // Получить модальное окно
     const modal = document.getElementById('modal');
     const modalReg = document.getElementById('modal--reg');
+    const request = document.getElementById('request');
 
     // Получить кнопку, которая открывает модальное окно
     const logins = document.querySelectorAll('.link-to-login');
     const regs = document.querySelectorAll('.link-to-reg');
+    const reqs = document.querySelectorAll('.pricing__button');
 
     // Получить элемент <span>, который закрывает модальное окно
     const spans = document.querySelectorAll('.modal__close');
@@ -15,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
         login.addEventListener('click', function (event) {
             event.preventDefault();
             modalReg.style.display = 'none';
+            request.style.display = 'none';
             modal.style.display = 'block';
             document.body.classList.add('no-scroll');
         });
@@ -24,7 +27,18 @@ document.addEventListener('DOMContentLoaded', function () {
         reg.addEventListener('click', function (event) {
             event.preventDefault();
             modal.style.display = 'none';
+            request.style.display = 'none';
             modalReg.style.display = 'block';
+            document.body.classList.add('no-scroll');
+        });
+    });
+
+    reqs.forEach(req => {
+        req.addEventListener('click', function (event) {
+            event.preventDefault();
+            modal.style.display = 'none';
+            request.style.display = 'block';
+            modalReg.style.display = 'none';
             document.body.classList.add('no-scroll');
         });
     });
@@ -35,15 +49,17 @@ document.addEventListener('DOMContentLoaded', function () {
         span.addEventListener('click', function () {
             modal.style.display = 'none';
             modalReg.style.display = 'none';
+            request.style.display = 'none';
             document.body.classList.remove('no-scroll');
         });
     })
 
     // Когда пользователь нажимает в любом месте вне модального окна, закрыть его
     window.addEventListener('click', function (event) {
-        if (event.target === modal || event.target === modalReg) {
+        if (event.target === modal || event.target === modalReg || event.target === request) {
             modal.style.display = 'none';
             modalReg.style.display = 'none';
+            request.style.display = 'none';
             document.body.classList.remove('no-scroll');
         }
     });

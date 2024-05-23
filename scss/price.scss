@@ -21,30 +21,51 @@
             justify-content: center;
             margin-bottom: 48px;
         }
+    }
+}
 
-        &__btn {
-            width: 473px;
-            height: 68px;
-            font-family: 'Poiret One';
-            font-size: 31px;
-            background-color: $color-pink;
-            color: $color-blue;
-            font-weight: 400;
-            transition: background-color .3s ease;
+.main {
+    &__list {
+        justify-content: center;
+        display: flex;
+    }
+    &__item {
+        width: 473px;
+        height: 100%;
+        background: none;
+    }
+    &__btn {
+        width: 473px;
+        height: 68px;
+        font-family: 'Poiret One';
+        font-size: 31px;
+        background-color: $color-pink;
+        color: $color-blue;
+        font-weight: 400;
+        transition: background-color .3s ease;
 
-            &:not(:last-child) {
-                margin-right: 16px;
-            }
+        &:not(:last-child) {
+            margin-right: 16px;
+        }
 
-            &:hover {
-                cursor: pointer;
-                background-color: darken($color-pink, 25%);
-            }
+        &:hover {
+            cursor: pointer;
+            background-color: darken($color-pink, 25%);
+        }
+    }
+}
 
-            &.active {
-                background-color: transparent;
-                border: 2px solid $color-blue;
-            }
+.swiper-pagination {
+    top: 0;
+    position: relative;
+}
+
+.swiper-pagination-bullet {
+    opacity: 1;
+    &-active {
+        & .main__btn {
+            background-color: transparent;
+            border: 2px solid $color-blue;
         }
     }
 }

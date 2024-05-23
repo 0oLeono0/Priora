@@ -94,6 +94,12 @@
     }
 }
 
+.itc-select__option_selected {
+    &::after {
+        background-image: none;
+    }
+}
+
 .authorization {
     display: flex;
     flex-wrap: nowrap;

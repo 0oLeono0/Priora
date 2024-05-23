@@ -177,3 +177,62 @@
         color: $color-blue;
     }
 }
+
+.modal {
+    &__select {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 24px;
+    }
+    &--request {
+        & .modal {
+            &__content {
+                height: 560px;
+            }
+            &__btn {
+                width: 154px;
+                background-color: $color-purple;
+                &:hover {
+                    background-color: darken($color-purple, 25%);
+                }
+            }
+        }
+    }
+}
+
+.select {
+    &__toggle {
+        position: relative;
+        box-sizing: border-box;
+        padding: 4px 16px;
+        width: 100%;
+        background-color: $color-text;
+        border-radius: 0;
+        font-size: 18px;
+        color: $color-blue;
+
+        &:hover {
+            color: $color-blue;
+        }
+
+        &::after {
+            position: absolute;
+            right: 16px;
+            width: 13px;
+            height: 6px;
+            background-image: url(../img/svg/accardionArrow.svg);
+        }
+    }
+
+    &__dropdown {
+        top: 32px;
+        border-radius: 0;
+    }
+
+    &__option {
+        background-color: $color-text;
+        color: $color-blue;
+        padding: 4px 16px;
+        font-size: 18px;
+    }
+}

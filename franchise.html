@@ -297,6 +297,41 @@
         </div>
     </div>
 
+    <div id="request" class="modal modal--request">
+        <div class="modal__content">
+            <span class="modal__close"></span>
+            <h2 class="modal__title">Обратный звонок</h2>
+            <form class="modal__form">
+                <label class="name__label modal__label" for="name">Имя и Фамилия*</label>
+                <input required class="name modal__input" type="text" id="nameReq" name="name"
+                    placeholder="Дарья Круглова">
+                <label class="phone__label modal__label" for="phone">Номер телефона*</label>
+                <input required class="phone modal__input" type="tel" id="phoneReq" name="phone"
+                    placeholder="8 (999) 999-99-99">
+                <label class="phone__label modal__label" for="phone">Какой тип франшизы хотите открыть?</label>
+                <div class="itc-select modal__select" id="select-2">
+                    <button type="button" class="itc-select__toggle select__toggle" name="car" value=""
+                        data-select="toggle" data-index="-1">Стандарт</button>
+                    <div class="itc-select__dropdown select__dropdown">
+                        <ul class="itc-select__options select__options">
+                            <li class="itc-select__option select__option" data-select="option" data-value="volkswagen"
+                                data-index="0">
+                                Стандарт</li>
+                            <li class="itc-select__option select__option" data-select="option" data-value="ford"
+                                data-index="1">Готовое предприятие</li>
+                        </ul>
+                    </div>
+                </div>
+                <label class="chckbox__container">
+                    <input class="checkbox" type="checkbox">
+                    <div class="checkbox__checkmark"></div>
+                    <p class="checkbox__text">согласен на обработку персональных данных*</p>
+                </label>
+                <button class="modal__btn" type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+
 </body>
 <script src="./js/itc-custom-select.js"></script>
 <script src="./js/franchise.js"></script>
