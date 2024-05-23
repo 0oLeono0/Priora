@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="./scss/itc-custom-select.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./scss/style.css">
-    <link rel="stylesheet" href="./scss/price.css">
+    <link rel="stylesheet" href="./scss/schedule.css">
+    <link rel="stylesheet" href="./scss/login.css">
     <title>Pulse Motion</title>
 </head>
 
@@ -27,10 +28,8 @@
                 </ul>
             </nav>
             <div class="itc-select" id="select-1">
-                <!-- Кнопка для открытия выпадающего списка -->
                 <button type="button" class="itc-select__toggle" name="car" value="" data-select="toggle"
                     data-index="-1">Санкт-петербург</button>
-                <!-- Выпадающий список -->
                 <div class="itc-select__dropdown">
                     <ul class="itc-select__options">
                         <li class="itc-select__option" data-select="option" data-value="volkswagen" data-index="0">
@@ -41,92 +40,75 @@
                         <li class="itc-select__option" data-select="option" data-value="nissan" data-index="3">Лондон
                         </li>
                         <li class="itc-select__option" data-select="option" data-value="piter" data-index="4">
-                            Санкт-петербург
-                        </li>
+                            Санкт-петербург</li>
                     </ul>
                 </div>
             </div>
 
             <div class="authorization">
-                <a href="" class="authorization__login link-to-login">Вход</a> | <a href="" class="authorization__reg link-to-reg">Регистрация</a>
+                <a href="#" class="authorization__login link-to-login">Вход</a> | <a href="#"
+                    class="authorization__reg link-to-reg">Регистрация</a>
             </div>
         </div>
     </header>
 
     <main class="main">
-        <div class="container">
-            <h2 class="main__header">Стоимость занятий</h2>
-            <div class="main__styles">
-                <ul class="main__list swiper-pagination">
-                    <li class="main__item"><button class="main__btn">Hip-hop</button></li>
-                    <li class="main__item"><button class="main__btn">Vogue</button></li>
-                </ul>
-            </div>
-            <div class="swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="small">
-                            <div class="price__card">
-                                <p class="card__quantity">1</p>
-                                <p class="card__train">тренировка</p>
-                                <p class="card__time">(1,5 часа)</p>
-                                <p class="card__price">500 ₽</p>
-                                <button class="card__buy">Купить</button>
-                            </div>
-                            <div class="price__card">
-                                <p class="card__quantity">4</p>
-                                <p class="card__train">тренировки</p>
-                                <p class="card__time">(6 часов)</p>
-                                <p class="card__price">3800 ₽</p>
-                                <button class="card__buy">Купить</button>
-                            </div>
-                            <div class="price__card">
-                                <p class="card__quantity">8</p>
-                                <p class="card__train">тренировок</p>
-                                <p class="card__time">(8 часов)</p>
-                                <p class="card__price">5500 ₽</p>
-                                <button class="card__buy">Купить</button>
-                            </div>
-                            <div class="price__card last">
-                                <p class="card__quantity">12</p>
-                                <p class="card__train">тренировок</p>
-                                <p class="card__time">(12 часов)</p>
-                                <p class="card__price">6000 ₽</p>
-                                <button class="card__buy">Купить</button>
-                            </div>
-                        </div>
-                        <div class="big">
-                            <div class="price__card">
-                                <p class="card__quantity">Безлимит</p>
-                                <p class="card__train">тренировок</p>
-                                <p class="card__time">(на месяц)</p>
-                                <p class="card__price">9000 ₽</p>
-                                <button class="card__buy">Купить</button>
-                            </div>
-                            <div class="price__card last">
-                                <p class="card__quantity">Безлимит</p>
-                                <p class="card__train">тренировок</p>
-                                <p class="card__time">(на год)</p>
-                                <p class="card__price">70 000 ₽</p>
-                                <button class="card__buy">Купить</button>
-                            </div>
+        <div class="profile">
+            <div class="container profile__container">
+                <div class="profile__header">
+                    <div class="profile__image-wrapper">
+                        <img src="./img/jpg/educator4.jpg" alt="Дарья" class="profile__image">
+                    </div>
+                    <div class="profile__greeting">
+                        <h1 class="profile__title">Привет, Дарья!</h1>
+                        <div class="profile__details">
+                            <p class="profile__detail"><span>Тариф:</span> не выбран</p>
+                            <p class="profile__detail"><span>Цена:</span> не выбран</p>
+                            <p class="profile__detail"><span>Срок действия до:</span> нет данных</p>
+                            <p class="profile__detail"><span>Осталось занятий:</span> нет данных</p>
+                            <p class="profile__detail"><span>Активные группы:</span> нет данных</p>
+                            <label class="profile__change-plan">
+                                <a href="#" class="profile__checkbox"> Хочу изменить план тренировок </a>
+                            </label>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="big">
-                            <div class="price__card">
-                                <p class="card__quantity">Безлимит</p>
-                                <p class="card__train">тренировок</p>
-                                <p class="card__time">(на месяц)</p>
-                                <p class="card__price">9000 ₽</p>
-                                <button class="card__buy">Купить</button>
-                            </div>
-                            <div class="price__card last">
-                                <p class="card__quantity">Безлимит</p>
-                                <p class="card__train">тренировок</p>
-                                <p class="card__time">(на год)</p>
-                                <p class="card__price">70 000 ₽</p>
-                                <button class="card__buy">Купить</button>
+                    <div class="profile__info">
+                        <p class="profile__name">Круглова Дарья Вячеславовна</p>
+                        <p class="profile__dob">01.01.1970</p>
+                        <p class="profile__phone">8 (999) 999-99-99</p>
+                        <p class="profile__email">pochta@mail.ru</p>
+                        <a href="#" class="profile__edit-link">Редактировать данные</a>
+                    </div>
+                </div>
+                <div class="profile__stats">
+                    <div class="profile__stat">
+                        <p class="profile__stat-number">0</p>
+                        <p class="profile__stat-description">Занятий посещено</p>
+                    </div>
+                    <div class="profile__stat">
+                        <p class="profile__stat-number">0</p>
+                        <p class="profile__stat-description">МК посещено</p>
+                    </div>
+                    <div class="profile__stat">
+                        <p class="profile__stat-number">0</p>
+                        <p class="profile__stat-description">Часов тренировок</p>
+                    </div>
+                </div>
+            </div>
+            <div class="schedule">
+                <div class="container schedule__container">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <h2 class="schedule__title"><span
+                                        class="schedule__arrow schedule__arrow--prev swiper-button-prev"></span>Твое
+                                    расписание на эту неделю <span
+                                        class="schedule__arrow schedule__arrow--next swiper-button-next"></span></h2>
+                                        <div class="slide__block">
+                                            <p>Упс... ты не состоишь ни в одной группе</p>
+                                            <p>Скорей записывайся и приходи на бесплатное пробное занятие!</p>
+                                            <button class="slide__btn">Записаться на занятие</button>
+                                        </div>
                             </div>
                         </div>
                     </div>
@@ -226,7 +208,7 @@
 </body>
 <script src="./js/itc-custom-select.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="./js/price.js"></script>
+<script src="./js/login.js"></script>
 <script src="./js/modal.js"></script>
 
 </html>

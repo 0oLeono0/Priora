@@ -9,6 +9,19 @@ document.addEventListener('DOMContentLoaded', function () {
     const regs = document.querySelectorAll('.link-to-reg');
     const reqs = document.querySelectorAll('.pricing__button');
 
+    const loginBtn = document.querySelector('.modal__btn--login');
+    const regBtn = document.querySelector('.modal__btn--reg');
+
+    loginBtn.addEventListener('click', () => {
+        event.preventDefault();
+        window.location.href = `login.html`;
+    })
+
+    regBtn.addEventListener('click', () => {
+        event.preventDefault();
+        window.location.href = `newUser.html`;
+    })
+
     // Получить элемент <span>, который закрывает модальное окно
     const spans = document.querySelectorAll('.modal__close');
 
@@ -16,8 +29,10 @@ document.addEventListener('DOMContentLoaded', function () {
     logins.forEach(login => {
         login.addEventListener('click', function (event) {
             event.preventDefault();
-            modalReg.style.display = 'none';
-            request.style.display = 'none';
+            modalReg.style.display = 'none'
+            if (request) {
+                request.style.display = 'none';
+            };
             modal.style.display = 'block';
             document.body.classList.add('no-scroll');
         });
@@ -27,7 +42,9 @@ document.addEventListener('DOMContentLoaded', function () {
         reg.addEventListener('click', function (event) {
             event.preventDefault();
             modal.style.display = 'none';
-            request.style.display = 'none';
+            if (request) {
+                request.style.display = 'none';
+            }
             modalReg.style.display = 'block';
             document.body.classList.add('no-scroll');
         });
@@ -48,8 +65,10 @@ document.addEventListener('DOMContentLoaded', function () {
     spans.forEach(span => {
         span.addEventListener('click', function () {
             modal.style.display = 'none';
-            modalReg.style.display = 'none';
-            request.style.display = 'none';
+            modalReg.style.display = 'none'
+            if (request) {
+                request.style.display = 'none';
+            };
             document.body.classList.remove('no-scroll');
         });
     })
@@ -58,8 +77,10 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('click', function (event) {
         if (event.target === modal || event.target === modalReg || event.target === request) {
             modal.style.display = 'none';
-            modalReg.style.display = 'none';
-            request.style.display = 'none';
+            modalReg.style.display = 'none'
+            if (request) {
+                request.style.display = 'none';
+            };
             document.body.classList.remove('no-scroll');
         }
     });

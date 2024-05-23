@@ -90,6 +90,13 @@
             border-bottom: 0;
         }
 
+        &--master {
+            & span {
+                color: $color-text;
+                background-color: $color-purple;
+            }
+        }
+
         &--class {
             & span {
                 background-color: $color-pink;

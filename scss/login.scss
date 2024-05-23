@@ -1,0 +1,171 @@
+@import "colors";
+@import "fonts";
+@import "responsive";
+@import "base";
+
+.profile {
+    color: $color-blue;
+    padding-top: 144px;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 144px;
+    }
+
+    &__image {
+        width: 308px;
+        height: 410px;
+
+        &-wrapper {
+            flex: 1;
+            text-align: center;
+            margin-right: 124px;
+        }
+    }
+
+    &__greeting {
+        margin-right: 124px;
+    }
+
+    &__title {
+        margin-bottom: 24px;
+        font-family: 'Poiret One';
+        font-size: 54px;
+    }
+
+    &__detail {
+        box-sizing: border-box;
+        font-size: 21px;
+        margin-bottom: 8px;
+        padding: 8px 0;
+
+        & span {
+            background-color: $color-pink;
+            padding: 8px 16px;
+        }
+
+        &s {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__change {
+        &-plan {
+            font-size: 16px;
+        }
+    }
+
+    &__checkbox {
+        position: relative;
+        color: $color-purple--dark;
+        padding-left: 23px;
+
+        &::before {
+            position: absolute;
+            left: 0;
+            top: 3px;
+            display: inline-block;
+            content: '';
+            width: 17px;
+            height: 17px;
+            background-image: url(../img/svg/change.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    &__name,
+    &__dob,
+    &__phone,
+    &__email {
+        font-size: 21px;
+        margin-bottom: 8px;
+    }
+
+    &__edit {
+        &-link {
+            padding-top: 8px;
+            position: relative;
+            color: $color-purple--dark;
+            padding-left: 23px;
+
+            &::before {
+                position: absolute;
+                left: 0;
+                top: 8px;
+                display: inline-block;
+                content: '';
+                width: 17px;
+                height: 17px;
+                background-image: url(../img/svg/change.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+    }
+
+    &__stat {
+        text-align: center;
+        width: 416px;
+        height: 379px;
+        background-color: $color-blue;
+        box-sizing: border-box;
+        padding: 48px;
+
+        &s {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 159px;
+        }
+
+        &-number {
+            font-family: 'Poiret One';
+            color: $color-text;
+            font-size: 160px;
+            margin-bottom: 48px;
+        }
+
+        &-description {
+            white-space: nowrap;
+            font-family: 'Poiret One';
+            color: $color-text;
+            font-size: 41px;
+        }
+    }
+}
+
+.schedule {
+    padding: 0;
+    margin-bottom: 144px;
+}
+
+.slide {
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        & p {
+            max-width: 317px;
+            margin-bottom: 24px;
+        }
+    }
+    &__btn {
+        box-sizing: border-box;
+        width: 290px;
+        height: 61px;
+        padding: 16px 32px;
+        background-color: $color-purple--dark;
+        color: $color-text;
+        font-size: 21px;
+        font-family: "Nunito";
+        font-weight: 400;
+        transition: background-color .3s ease;
+
+        &:hover {
+            cursor: pointer;
+            background-color: lighten($color-purple--dark, 25%);
+        }
+    }
+}
