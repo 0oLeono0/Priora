@@ -158,40 +158,50 @@
 
     &__about {
         display: block;
+
         &.swiper-slide-active {
             display: block;
         }
+
         &--all {
             display: flex;
             justify-content: space-between;
-            &.swiper-slide-active, .swiper-slide-next, .swiper-slide-prev {
+
+            &.swiper-slide-active,
+            .swiper-slide-next,
+            .swiper-slide-prev {
                 display: flex;
             }
         }
     }
 
-    
+
     .about {
         &__block {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 48px;
+
             &--all {
                 width: 632px;
                 display: block;
             }
         }
+
         &__text {
             max-width: 632px;
             font-size: 18px;
             line-height: 30px;
             margin: 0;
+
             &--all {
                 margin-bottom: 48px;
             }
         }
+
         &__btn {
+            white-space: nowrap;
             box-sizing: border-box;
             width: 290px;
             height: 61px;
@@ -201,22 +211,28 @@
             font-size: 21px;
             font-family: "Nunito";
             font-weight: 400;
-            transition: background-color .3s ease;
-            
+            border: 2px solid transparent;
+            transition: background-color .3s ease, color .3s ease, border .3s ease;
+
             &:hover {
+                background-color: transparent;
+                border: 2px solid $color-blue;
+                color: $color-blue;
                 cursor: pointer;
-                background-color: lighten($color-purple--dark, 25%);
             }
         }
+
         &__img {
             margin: 0;
             width: 308px;
             height: 345px;
+
             &--block {
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
             }
+
             &--all {
                 width: 308px;
                 height: 306px;
@@ -234,6 +250,7 @@
 
 .swiper-pagination-bullet {
     opacity: 1;
+
     &-active {
         & .main__btn {
             background-color: transparent;
@@ -248,7 +265,7 @@
         height: 70px;
         background: none;
         border: 0;
-        
+
         & .vjs-icon-placeholder {
             &::before {
                 content: '';
@@ -258,6 +275,7 @@
             }
         }
     }
+
     &:hover .vjs-big-play-button {
         background: none;
     }
@@ -269,36 +287,44 @@
     padding-top: 83px;
     padding-bottom: 55px;
     background-color: $color-blue;
+
     &__container {
         display: flex;
         justify-content: space-between;
         align-items: end;
     }
+
     &__block {
         text-align: right;
     }
+
     &__nav {
         margin-bottom: 48px;
     }
+
     &__link {
         margin-bottom: 8px;
         font-size: 15px;
         font-weight: 300;
         transition: color .3s ease;
+
         &s {
             display: flex;
             flex-direction: column;
             margin-bottom: 61px;
         }
+
         &:hover {
             cursor: pointer;
             color: darken($color-text, 25%);
         }
     }
+
     &__cop {
         font-size: 15px;
         font-weight: 300;
     }
+
     &__item {
         font-weight: 300;
         font-size: 15px;
