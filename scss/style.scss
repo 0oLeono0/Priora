@@ -640,13 +640,18 @@
             height: 100%;
             font-family: "Poiret One";
             font-size: 31px;
+            transition: font-size .3s ease;
         }
 
         &:hover {
             cursor: pointer;
 
             & .educators__filter {
-                background-color: rgba($color-blue, 0);
+                background-color: rgba($color-blue, .7);
+            }
+
+            & .educators__block__header {
+                font-size: 47px;
             }
         }
     }
@@ -689,9 +694,16 @@
         box-sizing: border-box;
         padding: 56px 77px 31px 77px;
         margin-right: 16px;
+        border: 2px solid transparent;
+        transition: background-color .3s ease, border .3s ease;
 
         &.last {
             margin-right: 69px;
+        }
+
+        &:hover {
+            background-color: transparent;
+            border: 2px solid $color-blue;
         }
     }
 
@@ -795,6 +807,13 @@
         background-color: $color-pink;
         color: $color-blue;
         margin-bottom: 24px;
+        border: 2px solid transparent;
+        transition: background-color .3s ease, border .3s ease, color .3s ease;
+        &:hover {
+            border: 2px solid $color-text;
+            color: $color-text;
+            background-color: transparent;
+        }
     }
 
     .card {
@@ -838,8 +857,7 @@
 
             &:hover {
                 background-color: transparent;
-                border: 1px solid $color-blue;
-                color: $color-blue;
+                border: 1px solid $color-text;
                 cursor: pointer;
             }
         }
@@ -964,6 +982,13 @@
         height: 259px;
         padding: 32px;
         background-color: $color-pink;
+        border: 1px solid transparent;
+        transition: background-color .3s ease, color .3s ease, border .3s ease;
+
+        &:hover {
+            background-color: transparent;
+            border: 1px solid $color-blue;
+        }
     }
 
     .card {
